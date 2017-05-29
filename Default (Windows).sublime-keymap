@@ -1,0 +1,25 @@
+[
+{ "keys": ["ctrl+s"], "command": "save_all" },   
+  //chrome
+{ "keys":["f1"], "command":"side_bar_files_open_with",
+"args":{
+"paths":[],
+"application":"C:\\Users\\Pulse\\AppData\\Local\\Google\\Chrome\\Application\\chrome.exe",
+"extensions":".*"}},
+//ie
+{ "keys":["f2"], "command":"side_bar_files_open_with",
+"args":{
+"paths":[],
+"application":"C:\\Program Files (x86)\\Internet Explorer\\iexplore.exe",
+"extensions":".*"}},
+// Press the tab indent a sufficient distance
+    { "keys": ["tab"], "command": "reindent", "context":
+        [
+            { "key": "setting.auto_indent", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
+            { "key": "preceding_text", "operator": "regex_match", "operand": "^$", "match_all": true },
+            { "key": "following_text", "operator": "regex_match", "operand": "^$", "match_all": true }
+        ]
+    },
+
+]
